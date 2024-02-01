@@ -1,0 +1,48 @@
+﻿cLorenzo De Appolonia
+Mikola Honcharov
+Project proposition
+UFC betting application
+We want to develop an application which would allow the user to bet on real UFC fights and get statistics on fighters and on fights. In therms of data our project will be based on two datasets, one containing all the fighter that fought in the UFC roaster (updated until two years ago) and one that has fighting statistic, including a long list of fights with fighters names, winners and looser, points scored and more.
+The first part of the project will include visualising statistics on a single fighter and visualising groups of fighters basing on different criteria. In addition to that our application will allow the user to visualise the fight history between two fighters if our dataset has the related data.
+The second part of our project will allow the user to bet on real UFC events. We will limit the events shown to the user (showing the user only the ones that will occur in the next 10 days for example) and we will only allow the user to bet on 1 type of event/fight (for example UFC fight night or UFC nnn), this way we will limit the amount of information that we have to retrieve and manage.The way we want to implement this functionality is by scarping the UFC stats page ‘Upcoming Events’ every time a user logs into the application and presenting the upcoming fights. Once we have the information about the fight we can check if the fighters are in our database and if they aren’t we can add them. When the user places his bet the bet is saved in our system (database or csv) and when the user logs back the application will scrape the UFC stats page ‘past events’ to check if the fight has already happened and eventually its result.
+We know that is an ambitious idea and we will try to implement all of it, nonetheless due to the early stage in which we are we are definitely overlooking some components.
+
+
+OBJECTS 
+* Fighter 
+* Fight
+DATA PRESENTED
+* FIGHTER CHARACTERISTICS [1] : Stance / Height_cm / Reach / weight range ? / age / 
+* FIGHT CHARACTERISTICS [2] :  Referee / Date / Location / Winner  / Weight_class  / total_fight_seconds / Total_round / Win streak /A - B wins,  losses, draws
+FUNCTIONALITIES - GET
+* Get fighter stats [1] by:
+   * Name
+
+
+* Get fighters by:
+   * Stance
+   * Weight
+   * Age 
+
+
+* Get fight stats [2] by:
+   * Date + Location
+
+
+* Get fights by:
+   * Date
+   * Location
+
+
+* Get won fights by fighter
+
+
+DATABASE LOGICAL SCHEMA:
+
+Fight = (fight_id, referee, location, date, weight_class(FK), fight_winner(FK), result_winner(FK))
+red_corner = (fight_id(FK), age, weight, win_streak, wins/losses/draws, fighter_name(FK))
+blue_corner = (fight_id(FK), age, weight, win_streak, wins/losses/draws, fighter_name(FK))
+Fighter = ( Name, height, reach, stance )
+Result = (winner, total_fight_seconds, total_rounds, fight_id(FK))
+Bet = (amount, bet_id, date, payoff, winner(FK), fight_id(FK))
+weight_class = (name, code)

@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: ufc-betting
+Version: 1.2.3
+Summary: Library for betting on UFC fights and getting fights and fighters statistics
+Author: Honcharov, De Appolonia
+Author-email: lorenzoacg@gmail.com
+Requires-Python: >=3.11

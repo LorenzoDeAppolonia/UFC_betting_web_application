@@ -1,0 +1,38 @@
+GET:
+
+    * FIGHTS:
+        - '/': ✅︎
+        - '/date/<date>': ✅
+        - '/location/<location>': ✅
+        - '/single_fight/<code>': ✅
+
+    * FIGHTERS:
+        - '/': ✅
+        - '/name/<name>': ✅
+        - '/weight/<weight>':
+        - '/stance/<stance>': ✅
+        - '/age/<age>':
+        - '/single_fighter/<code>': ✅
+
+POST:
+
+    * FIGHTS:
+
+        - '/' --> add fight: ✅
+
+
+    * FIGHTERS:
+
+        - '/' --> add fight:
+
+
+
+
+
+
+
+
+
+
+
+
